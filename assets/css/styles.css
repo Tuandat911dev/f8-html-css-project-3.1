@@ -47,7 +47,7 @@ body {
 	font-weight: 500;
 	line-height: 1.56;
 	outline: none;
-    transition: 0.5s ease;
+	transition: 0.5s ease;
 }
 
 .btn:hover {
@@ -96,7 +96,16 @@ body {
 	height: 2px;
 	background: var(--Primary-color-black, #152427);
 	bottom: 20px;
-	right: 105px;
+	margin-left: 20px;
+}
+
+.section__desc {
+	--width: 478px;
+	color: var(--text-color-light-gray, #7d8188);
+	width: var(--width);
+	font-size: 1.6rem;
+	font-weight: 500;
+	line-height: 1.63;
 }
 
 .nav__wrap {
@@ -407,7 +416,7 @@ body {
 .service-card__img--wrap {
 	width: 370px;
 	height: 318px;
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .service-card__img {
@@ -449,4 +458,206 @@ body {
 
 .service-card:hover .service-card__img {
 	transform: scale(1.1);
+}
+
+/* =============== About ================== */
+.about {
+	margin-top: 149px;
+}
+
+.about__inner {
+	display: flex;
+	align-items: center;
+	gap: 64px;
+}
+
+.about__media {
+	position: relative;
+	display: flex;
+	gap: 21px;
+}
+
+.about__media::before {
+	position: absolute;
+	content: '';
+	display: inline-block;
+	width: 541.69px;
+	height: 360.639px;
+	transform: rotate(12.645deg);
+	background-image: url('../icon/flower.svg');
+	z-index: 2;
+	top: 20px;
+	left: 13px;
+}
+
+.about__img {
+	margin-top: 13px;
+	width: 284px;
+	height: 480px;
+	border-radius: 210px;
+	box-shadow: 0 4px 234px 11px rgba(59, 137, 71, 0.25);
+	object-fit: cover;
+	animation: slideY 1.5s ease-in-out infinite alternate;
+}
+
+.about__img:first-of-type {
+	margin-top: 90px;
+}
+
+.about-badge {
+	z-index: 3;
+	position: absolute;
+	font-family: 'Public Sans', sans-serif;
+	padding: 19px;
+	width: 143px;
+	height: 144px;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0 7px 54px 0 rgba(154, 154, 154, 0.25);
+	bottom: 8px;
+	right: -9px;
+	animation: slideY 1.5s ease-in-out infinite alternate;
+}
+
+.about-badge__title {
+	display: block;
+	color: var(--Primary-color-black, #152427);
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.4;
+}
+
+.about-badge__subtitle {
+	display: block;
+	color: var(--text-color-black-gray, #575d5e);
+	margin-top: 6px;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.4;
+}
+
+.about-badge__percent {
+	display: block;
+	margin-top: 10px;
+	color: var(--Primary-color-black, #152427);
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.4;
+}
+
+.about-badge__progress {
+	margin-top: 3px;
+	width: 100%;
+	height: 2px;
+	position: relative;
+	border-radius: 10px;
+	background: #eaeaea;
+}
+
+.about-badge__progress::before {
+	content: '';
+	position: absolute;
+	display: inline-block;
+	width: 40%;
+	height: 2px;
+	border-radius: 10px;
+	background-color: #83a17d;
+	top: 0;
+	left: 0;
+}
+
+.about-badge__loading {
+	display: block;
+	margin-top: 3px;
+	color: var(--Primary-color-black, #152427);
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.4;
+	text-align: right;
+}
+
+.about-badge__dot {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin-top: 3px;
+	width: 11px;
+	height: 11px;
+	border-radius: 11px;
+	background: #eaeaea;
+}
+
+.about-badge__dot::before {
+	content: '';
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	border-radius: 5px;
+	background: var(--Primary-color-black-green, #143c3c);
+}
+
+.about-badge__team {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 4px;
+}
+
+.about-team__title {
+	color: var(--Primary-color-black, #152427);
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.4;
+}
+
+.badge-team__avatar-list {
+	display: flex;
+	align-items: center;
+}
+
+.badge-team__avatar {
+	width: 16px;
+	height: 16px;
+	border-radius: 16px;
+	border: 1px solid #fff;
+	object-fit: cover;
+}
+
+.badge-team__avatar:not(.badge-team__avatar:first-child) {
+	margin-right: -6px;
+}
+
+.about__heading {
+	--line: none;
+	--width: 483px;
+}
+
+.about__desc {
+	margin-top: 11px;
+}
+
+.about-stas {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	position: relative;
+	padding: 36px 0 20px;
+	border-bottom: 1px solid #83a17d;
+}
+
+.about-stas__percent {
+	color: var(--Primary-color-black, #152427);
+	font-family: Poppins;
+	font-size: 4.2rem;
+	font-weight: 600;
+	line-height: 1.24;
+}
+
+.about-stas__desc {
+	color: var(--text-color-light-gray, #7d8188);
+	font-family: Poppins;
+	font-size: 1.4rem;
+	font-weight: 500;
+	line-height: 1.7;
 }
