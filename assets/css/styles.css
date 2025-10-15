@@ -7,6 +7,7 @@
 	--Primary-color-black: #152427;
 	--text-color-white: #fff;
 	--text-color-black-gray: #575d5e;
+	--Secondary-color-light-green: #e2eddf;
 }
 
 html {
@@ -134,7 +135,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 60px 28px 88px 0;
+	padding: 28px 28px 28px 0;
 }
 
 .hero__content {
@@ -211,6 +212,8 @@ body {
 
 .hero__media {
 	position: relative;
+	padding-top: 32px;
+	padding-bottom: 164px;
 }
 
 .hero__media::before {
@@ -221,7 +224,7 @@ body {
 	background-repeat: no-repeat;
 	width: 545px;
 	height: 361.174px;
-	top: -32px;
+	top: 0px;
 	left: -204px;
 	background-size: contain;
 	z-index: 2;
@@ -233,10 +236,10 @@ body {
 	display: inline-block;
 	background-image: url(../icon/flower.svg);
 	background-repeat: no-repeat;
-	transform: rotate(175deg);
+	transform: rotate(180deg);
 	width: 545px;
 	height: 361.174px;
-	bottom: -164px;
+	bottom: 0;
 	right: 37px;
 	background-size: contain;
 	z-index: 2;
@@ -283,4 +286,18 @@ body {
 	to {
 		transform: translateY(10px);
 	}
+}
+
+/* ============== Brand ================ */
+.brand {
+	margin-top: 45px;
+}
+
+.brand__inner {
+	padding: 76px 121px;
+	border-radius: 100.5px;
+	background: var(--Secondary-color-light-green, #e2eddf);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
