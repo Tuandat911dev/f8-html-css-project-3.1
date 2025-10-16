@@ -10,6 +10,11 @@
 	--Secondary-color-light-green: #e2eddf;
 }
 
+html,
+body {
+	scroll-behavior: smooth;
+}
+
 html {
 	font-size: 62.5%;
 }
