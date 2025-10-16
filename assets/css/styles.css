@@ -15,6 +15,13 @@ html {
 }
 
 /* =========== Common =========== */
+.line-clamp {
+	display: -webkit-box;
+	-webkit-line-clamp: var(--line-clamp, 3);
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
 a {
 	text-decoration: none;
 }
@@ -933,4 +940,115 @@ body {
 	font-weight: 500;
 	line-height: 1.7;
 	margin-top: 9px;
+}
+
+/* ============ Blog =============== */
+.blog {
+	margin-top: 184px;
+}
+
+.blog__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.blog__title {
+	--bottom: 10px;
+}
+
+.blog__desc {
+	--width: 409px;
+}
+
+.blog__list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+	margin-top: 90px;
+}
+
+.blog-card {
+	height: 521px;
+	width: 360px;
+	border-radius: 40px;
+	background-color: #fff;
+	overflow: hidden;
+	padding-right: 14px;
+}
+
+.blog-card:hover {
+	box-shadow: 0 12px 74px 0 rgba(91, 91, 91, 0.25);
+}
+
+.blog-card:hover .blog-card__content {
+	padding-left: 30px;
+}
+
+.blog-card:hover .blog-card__img {
+	transform: scale(1.1);
+}
+
+.blog-card,
+.blog-card__content,
+.blog-card__img {
+	transition: 0.5s ease;
+}
+
+.blog-card__img-wrap {
+	width: 360px;
+	height: 317px;
+	border-radius: 40px 40px 0 0;
+	overflow: hidden;
+}
+
+.blog-card__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.blog-card__content {
+	padding: 26px 30px 12px 0;
+}
+
+.blog-card__badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 107px;
+	height: 26px;
+	border-radius: 20px;
+	background: var(--Secondary-color-light-green, #e2eddf);
+	color: #000;
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.blog-card__title {
+	color: var(--Primary-color-black-green, #143c3c);
+	font-size: 1.8rem;
+	font-weight: 600;
+	line-height: 1.67;
+	margin-top: 13px;
+	width: 297px;
+	height: 90px;
+}
+
+.blog-card__divider {
+	width: 100%;
+	height: 1px;
+	background: #c4c4c4;
+	margin-top: 9px;
+}
+
+.blog-card__date {
+	display: block;
+	margin-top: 16px;
+	color: var(--text-color-black-gray, #575d5e);
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1.2;
+	text-align: right;
 }
