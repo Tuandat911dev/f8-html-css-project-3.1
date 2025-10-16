@@ -661,3 +661,141 @@ body {
 	font-weight: 500;
 	line-height: 1.7;
 }
+
+/* ============= Process ================= */
+.process {
+	margin-top: 79px;
+	padding-top: 36px;
+}
+
+.process__heading {
+	--width: 477px;
+}
+
+.process-list {
+	margin-top: 81px;
+}
+
+.process-item {
+	background-color: transparent;
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 50px;
+	padding: 55px 41px 25px 20px;
+	cursor: pointer;
+}
+
+.process-item::before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	height: 185px;
+	width: 1140px;
+	border-radius: 33px;
+	background: var(--Secondary-color-light-green, #e2eddf);
+	z-index: -1;
+	left: 0;
+	top: 0;
+	opacity: 0;
+}
+
+.process-item::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	width: 1131px;
+	height: 3px;
+	background: linear-gradient(
+		180deg,
+		#83a17d 4.17%,
+		rgba(131, 161, 125, 0) 36.46%
+	);
+	bottom: 0;
+	opacity: 1;
+}
+
+.process-item:hover::before {
+	opacity: 1;
+}
+
+.process-item:hover::after {
+	opacity: 0;
+}
+
+.process-item:hover .process-item__title::before {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.process-item:hover .process-item__img {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.process-item:hover .process-item__desc {
+	opacity: 0;
+}
+
+.process-item::before,
+.process-item::after,
+.process-item__title::before,
+.process-item__img,
+.process-item__desc {
+	transition: all 0.6s ease;
+}
+
+.process-item__order {
+	color: var(--Primary-color-black-green, #143c3c);
+	font-size: 7.2rem;
+	font-weight: 600;
+	width: 110px;
+	text-align: right;
+}
+
+.process-item__title {
+	position: relative;
+	color: var(--Primary-color-black, #152427);
+	font-size: 2.2rem;
+	font-weight: 600;
+	width: 176px;
+}
+
+.process-item__title::before {
+	content: 'Learn More';
+	display: inline-block;
+	position: absolute;
+	text-decoration: underline #152427 solid;
+	text-underline-offset: 3px;
+	color: var(--text-color-black-gray, #575d5e);
+	font-size: 1.8rem;
+	font-weight: 400;
+	left: 0;
+	bottom: -40px;
+	transform: scale(0);
+	opacity: 0;
+}
+
+.process-item__desc {
+	width: 572px;
+	color: var(--text-color-light-gray, #7d8188);
+	font-family: 'Public Sans';
+	font-size: 1.8rem;
+	font-weight: 500;
+	line-height: 1.56;
+	margin-left: 125px;
+	opacity: 1;
+}
+
+.process-item__img {
+	position: absolute;
+	width: 450px;
+	max-height: 444px;
+	max-width: 100%;
+	object-fit: cover;
+	object-position: top center ;
+	bottom: -20px;
+	right: 92px;
+	opacity: 0;
+	transform: scale(0);
+}
