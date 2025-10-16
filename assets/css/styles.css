@@ -870,3 +870,67 @@ body {
 .project-video:hover .project-video__play-btn {
 	color: var(--text-color-black-gray);
 }
+
+/* ============= Feature ================= */
+.feature {
+	margin-top: 140px;
+}
+
+.feature__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 20px;
+}
+
+.feature__heading {
+	--line: none;
+}
+
+.feature__desc {
+	--width: 547px;
+}
+
+.feature__list {
+	margin-top: 103px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 45px;
+}
+
+.feature-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 350px;
+	height: 362px;
+	border-radius: 160px;
+	border: 1.5px solid #cecece;
+	padding: 80px 30px 70px;
+	text-align: center;
+	transition: 0.5s ease;
+}
+
+.feature-card:hover {
+	border-color: transparent;
+	background: #fff;
+	box-shadow: 0 36px 100px 0 rgba(111, 120, 111, 0.2);
+	transform: translateY(-59px);
+}
+
+.feature-card__title {
+	margin-top: 26px;
+	color: #152427;
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.feature-card__desc {
+	color: var(--text-color-light-gray, #7d8188);
+	font-size: 1.4rem;
+	font-weight: 500;
+	line-height: 1.7;
+	margin-top: 9px;
+}
